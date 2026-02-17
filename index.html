@@ -854,6 +854,69 @@
             border-bottom: none;
         }
 
+        /* Hobbies Grid */
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .hobby-card {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 0, 110, 0.3);
+            padding: 2rem;
+            border-top: 3px solid var(--accent-pink);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-pink);
+            box-shadow: 0 15px 40px rgba(255, 0, 110, 0.4);
+        }
+
+        .hobby-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .hobby-title {
+            font-family: var(--font-mono);
+            font-size: 1.3rem;
+            color: var(--accent-pink);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(255, 0, 110, 0.3);
+        }
+
+        .hobby-achievements {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .hobby-achievements li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            padding: 0.3rem 0;
+            padding-left: 1rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .hobby-achievements li:hover {
+            color: var(--accent-pink);
+            transform: translateX(5px);
+        }
+
+        .hobby-achievements li::before {
+            content: '•';
+            color: var(--accent-pink);
+            position: absolute;
+            left: 0;
+        }
+
         /* Contact Section */
         .contact-content {
             text-align: center;
@@ -1032,6 +1095,7 @@
             <li><a href="#leadership">Leadership</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="menu-toggle" id="menuToggle">
@@ -1113,6 +1177,13 @@
                 <h3 class="project-title">Commodity Risk Analysis</h3>
                 <p class="project-description">
                     Applied GARCH models and Principal Component Analysis to analyze volatility regimes across precious metals and crude oil using 10-year historical data. Identified key risk factors and developed hedging strategies for commodity portfolios.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Delta Dynasty (Strategy Board Game)</h3>
+                <p class="project-description">
+                    Designed a strategy board game inspired by observing local livelihoods in Vietnam during a college study trip. The game models resource allocation, uncertainty, and risk–reward tradeoffs, challenging players to balance immediate survival with long-term strategic growth.
                 </p>
             </div>
 
@@ -1310,6 +1381,43 @@
                     <li>Power BI</li>
                     <li>Git & GitHub</li>
                     <li>Linux/Unix</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+     <!-- Hobbies Section -->
+    <section id="hobbies">
+        <h2 class="section-title">Hobbies & Interests</h2>
+        <div class="hobbies-grid">
+            <div class="hobby-card">
+                <span class="hobby-icon"></span>
+                <h3 class="hobby-title">Dance</h3>
+                <ul class="hobby-achievements">
+                    <li>Junior Diploma in Odissi with 12+ years of experience</li>
+                    <li>Winner at JITO National Dance Competition</li>
+                    <li>CMU Dance Symposium 2026</li>
+                </ul>
+            </div>
+
+            <div class="hobby-card">
+                <span class="hobby-icon"></span>
+                <h3 class="hobby-title">Badminton</h3>
+                <ul class="hobby-achievements">
+                    <li>Runner-up in Howrah District Competition 2019</li>
+                    <li>Champions at NUS Inter College Games 2025</li>
+                    <li>Member of NUS College Badminton Team</li>
+                    <li>Champions at Tarang 2024 (Singapore)</li>
+                </ul>
+            </div>
+
+            <div class="hobby-card">
+                <span class="hobby-icon"></span>
+                <h3 class="hobby-title">Public Speaking & Improv</h3>
+                <ul class="hobby-achievements">
+                    <li>Part of the school debate team</li>
+                    <li>Fond of poetry & improvisation</li>
+                    <li>Passionate about creative expression and storytelling</li>
                 </ul>
             </div>
         </div>
